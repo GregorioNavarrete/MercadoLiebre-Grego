@@ -1,0 +1,395 @@
+/* :root{
+    Amarillo: #EAC926;
+    Azul: #03264C;
+    Celeste: #1259c3;
+    Gris oscuro: #666;
+    Gris claro: #ebebeb;
+    Verde: #39b54a;
+} */
+
+.logo{
+  /*vamos como tiene q variar !!!  */
+  max-width: 150px;
+}
+.barra-busqueda{
+  width: 100%;
+}
+button {
+  background-color: white;
+  color: grey;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+
+.main-heder-top-bar  input {  
+  width: 100%;
+  padding: 10px;
+
+}
+
+.heder-top-bar{
+  /*hay que alinear las imagenes en para el estlo de mobil*/
+  display: flex;
+  padding: 5%;
+  
+  
+}
+
+main{
+  width: 90%;
+  margin: auto;
+ 
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+body {
+    background-color:white;
+    font-family: 'Roboto', sans-serif;/*para darle una fuente inportada */
+    font-size: 12px; /* Cuerpos de texto , nose si funcionara asi */
+    
+}
+header{
+    background-color: #EAC926;
+    
+
+}
+
+
+footer {
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /*Es para agradar todas las imagenes del footer*/
+.imagen-grande {
+    font-size: 48px; 
+  }
+  .nav-bar ul {
+    /*para quitarle los puntos */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-bar a {
+    text-decoration: none;
+    color: rgb(37, 36, 36)(128, 128, 128, 0.377);
+    padding: 5px 0px;
+    font-size: 14px;
+  }
+ 
+  
+
+
+
+/*Estilo de la barra de busqueda*/
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+ 
+  
+
+  
+
+  
+
+
+/* Titulares (Basado en tu última visita/Ofertas) */
+.Products {
+    font-size: 24px;
+}
+.producto{
+  margin-top: 5px;
+  margin: 5px;
+  margin-bottom : 5px;
+  background-color: white;
+
+
+
+
+
+}
+.Carcteristicas{
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  position: relative;
+}
+.CirculoVerde{
+  width: 35px; 
+  height: 35px; 
+  background-color: white; 
+  border: 2px solid #39b54a;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+
+  /*Para estas 2 cosas, se usa relative*/
+  position: absolute;
+  right: 20px;
+  top: -17px;
+    
+  
+
+
+  
+}
+.Ofertas {
+    font-size: 24px;
+}
+.imagen{
+  width: 90%;
+  height: 60%;
+}
+
+
+
+/* Precios */
+.precio {
+    font-size: 18px;
+}
+
+/* Descuentos */
+.descuento {
+    font-size: 16px;
+    color: #39b54a;
+}
+
+/* Descripciones */
+.descripcion     {
+    font-size: 16px;
+}
+
+/*estilo del BuergerMenu*/
+.burger-menu {
+  display: block;
+    background-color: #3498db;
+    cursor: pointer;
+    max-width: 50px;     /* Ajusta el tamaño del cuadro cuadrado */
+    font-size: 30px;
+    
+    
+    margin: auto; /*es para centrar*/
+    align-items: center; /* Centra verticalmente */
+    color: #fff; /* Color del ícono (puedes personalizarlo) */
+    border-radius: 20%; /* Hace que el cuadro sea redondeado para que sea un círculo */
+
+
+    padding-left: 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .promo{
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+  
+
+/*
+  para ser mobile first, se implenta 
+
+*/
+
+
+/* Media query para dispositivos mobil */
+@media (max-width: 361px) {
+/*cuando el ancho de la pantalla sea igual o menor a 361 píxeles*/
+  .burger-menu  {
+
+    display: block; 
+   
+  }
+  .nav-bar {
+    display: none; 
+  }
+
+  .descripcion     {
+    display: none;
+  }
+  .producto{
+
+
+    width: 100%; /* Dos artículos en tablet (menos espacio entre ellos) */
+    
+  }
+} 
+
+
+  /* Navegación en tablets (ancho mínimo 361px) */
+@media screen and (min-width: 361px) {
+  /*Aplica estilos a los que son iguales o mayores a 361*/
+  
+  .burger-menu  {
+    display: none; /*lo contrario es "display: block"*/
+  }
+  .producto{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+
+
+
+
+
+  /*poner este codigo en terminos de Flex Box !!!!!!!*/
+
+  .UltimaVista{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .producto {
+      width: 45%; /* Ancho de aproximadamente el 48% (ajusta según el margen) */
+  }
+    
+
+
+
+ 
+
+
+
+
+
+  .main-heder-top-bar{
+
+    /*esta modificacion va tambien en PC*/
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+    
+    
+  }
+
+  .main-heder-top-bar p {
+    padding-top: 40px;
+    max-width: 200px;
+  }
+  .main-heder-top-bar{
+ 
+    padding:0px;
+
+  }
+  .nav-bar{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-bar li{
+    margin: 5px;
+  }
+  .nav-right{
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-left{
+    display: flex;
+    justify-content: space-around;
+  }
+  .heder-top-bar{
+    width: 70%;
+  }
+}
+
+/* Navegación en desktop (ancho mínimo 769px) */
+@media screen and (min-width: 769px) {
+  .burger-menu  {
+    display: none; /*lo contrario es "display: block"*/
+  }
+  .producto{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  .UltimaVista{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .producto {
+      width: 23%; /* Ancho de aproximadamente el 48% (ajusta según el margen) */
+  }
+
+  .logo{
+    max-width: 250px;
+  }
+
+
+
+
+  .main-heder-top-bar , .nav-bar{
+align-items: center; 
+    margin: auto;
+}
+
+  .heder-top-bar{
+    width: 70%;
+  }
+
+
+}
+
+@media screen and (min-width: 1200px){
+  /*si hay pantallas muy grande para que se mantenga el heder*/
+  .heder-top-bar{
+    width: 70%;
+  }
+
+  .main-heder-top-bar , .nav-bar{
+    max-width: 1000px;
+    margin: auto;
+
+  }
+
+}
+
+
+
+
+/*hacemos el display box */
+.Precios{
+  display: flex;
+
+  align-items: center;
+  width: 100%;
+}
+
+.precio {
+width: 30%;
+}
+
+.descuento {
+width: 70%;
+}
+
+.UltimaVista{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+
+
+.CamionVerde:hover {
+  transform: rotate(-90deg); /* 360 grados de rotación cuando se hace "hover" */
+}
