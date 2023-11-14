@@ -12,8 +12,12 @@
         body{
             background-color:white;
         }
-        input{
+        .Cont-formulario input{
             border-radius: 5%;
+            width: 90%;
+            size: 30px;
+            font-size: 20px;
+            padding: 10px;
         }
         .fechaNacimiento , .perfilUsuario, .integrantes{
             font-size: 25px;
@@ -54,6 +58,33 @@
             text-decoration: none;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
+        
+        .CategoriasDeInteres div{
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
+       
+        .CategoriasDeInteres input{
+          width: 100px;
+        }
+
+        .PerfilUsuario input{
+          width: 100px;
+        }
+
+        .PerfilUsuario div{
+          display: flex;
+          align-items: flex-end;
+        }
+        .DatosPerfiles{
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+
+
 
 
         /*Estilos para el header*/
@@ -128,102 +159,7 @@ button {
     padding: 5px 0px;
     font-size: 14px;
   }
-  /*Media query del header*/
-  @media (max-width: 361px) {
-/*cuando el ancho de la pantalla sea igual o menor a 361 píxeles*/
-  .burger-menu  {
-
-    display: block; 
-   
-  }
-  .nav-bar {
-    display: none; 
-  }
-
-  .descripcion     {
-    display: none;
-  }
-  .producto{
-
-
-    width: 100%; /* Dos artículos en tablet (menos espacio entre ellos) */
-    
-  }
-} 
-
-@media screen and (min-width: 361px) {
-  /*Aplica estilos a los que son iguales o mayores a 361*/
   
-  .burger-menu  {
-    display: none; /*lo contrario es "display: block"*/
-  }
-  .producto{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-
-
-
-
-
-
-  /*poner este codigo en terminos de Flex Box !!!!!!!*/
-
-  .UltimaVista{
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .producto {
-      width: 45%; /* Ancho de aproximadamente el 48% (ajusta según el margen) */
-  }
-    
-
-
-
- 
-
-
-
-
-
-  .main-heder-top-bar{
-
-    /*esta modificacion va tambien en PC*/
-    display: flex;
-    padding: 5%;
-    justify-content: space-between;
-    
-    
-  }
-
-  .main-heder-top-bar p {
-    padding-top: 40px;
-    max-width: 200px;
-  }
-  .main-heder-top-bar{
- 
-    padding:0px;
-
-  }
-  .nav-bar{
-    display: flex;
-    justify-content: space-between;
-  }
-  .nav-bar li{
-    margin: 5px;
-  }
-  .nav-right{
-    display: flex;
-    justify-content: space-around;
-  }
-  .nav-left{
-    display: flex;
-    justify-content: space-around;
-  }
-  .heder-top-bar{
-    width: 70%;
-  }
-}
-
         /*Estilo para el footer*/
         footer{
             background-color: #EAC926;
@@ -235,11 +171,132 @@ button {
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding-top: 30px;
+
         }
         footer h3{
             
             font-weight: bold;
         }
+        .main-footer{
+          display: flex;
+          flex-wrap: wrap;
+
+
+          
+        }
+        footer i{
+          font-size: 30px;
+        }
+
+
+
+
+
+
+      /*Todas las medias Querys*/
+
+
+      
+
+      @media (max-width: 376px) {
+    /*cuando el ancho de la pantalla sea igual o menor a 361 píxeles*/
+      .burger-menu  {
+
+        display: block; 
+      
+      }
+      .nav-bar {
+        display: none; 
+      }
+
+      .descripcion     {
+        display: none;
+      }
+      .producto{
+
+
+        width: 100%; /* Dos artículos en tablet (menos espacio entre ellos) */
+        
+      }
+    } 
+
+    @media screen and (min-width: 376px) {
+      /*Aplica estilos a los que son iguales o mayores a 361*/
+      
+      .burger-menu  {
+        display: none; /*lo contrario es "display: block"*/
+      }
+      .producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      }
+
+      .main-footer{
+          display: flex;
+          flex-wrap: nowrap;
+          
+        }
+
+
+
+
+      /*poner este codigo en terminos de Flex Box !!!!!!!*/
+
+      .UltimaVista{
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .producto {
+          width: 45%; /* Ancho de aproximadamente el 48% (ajusta según el margen) */
+      }
+        
+
+
+
+    
+
+
+
+
+
+      .main-heder-top-bar{
+
+        /*esta modificacion va tambien en PC*/
+        display: flex;
+        padding: 5%;
+        justify-content: space-between;
+        
+        
+      }
+
+      .main-heder-top-bar p {
+        padding-top: 40px;
+        max-width: 200px;
+      }
+      .main-heder-top-bar{
+    
+        padding:0px;
+
+      }
+      .nav-bar{
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-bar li{
+        margin: 5px;
+      }
+      .nav-right{
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav-left{
+        display: flex;
+        justify-content: space-around;
+      }
+      .heder-top-bar{
+        width: 70%;
+      }
+    }
     </style>
 </head>
 <body>
@@ -291,16 +348,16 @@ button {
 
         <form class="formulario" action="" method="post"   >
             <div> 
-                <label for="nombreApellido">Nombre y Apellido:</label><br>
+                
                 <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido"><br>
             
             </div>
             <div> 
-                <label for="nombreUsuario">Nombre de usuario:</label><br>
+                
                 <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de usuario"><br>
             </div>
             <div> 
-                <label for="email">Email:</label><br>
+                
                 <input type="email" id="email" name="email" placeholder="Email"><br>
             </div>
             
@@ -309,38 +366,51 @@ button {
                 <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
             </div>
             <div> 
-                <label for="domicilio">Domicilio:</label><br>
+                
                 <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio"><br>
             </div>
-            <div>
-                <label class="perfilUsuario" for="perfilUsuario">Perfil del usuario:</label><br>
-                <input type="radio" id="comprar" name="perfil" value="comprar">
-                <label for="comprar">Comprar</label>
-                <input type="radio" id="vender" name="perfil" value="vender">
-                <label for="vender">Vender</label><br>
+            <div class="PerfilUsuario">
+                <label class="Usuario" for="perfilUsuario">Perfil del usuario:</label><br>
+                <div class="DatosPerfiles">
+                  <div>
+                    <input type="radio" id="comprar" name="perfil" value="comprar">
+                    <label for="comprar">Comprar</label> 
+                  </div>
+                  <div>
+                    <input type="radio" id="vender" name="perfil" value="vender">
+                    <label for="vender">Vender</label><br>
+                  </div>
+
+                </div>
+
             </div>
-            <div> 
+            <div class="CategoriasDeInteres"> 
                 <label class="integrantes">Categorías de interés:</label><br>
                 <div>
-                    <input type="checkbox" id="electro" name="categorias" value="electro">
                     <label for="electro">Electro</label>
+                    <input type="checkbox" id="electro" name="categorias" value="electro">
+                    
                 </div>
                 <div>
+                    <label for="moda">Moda</label>
                     <input type="checkbox" id="moda" name="categorias" value="moda">
-                    <label for="moda">Moda</label>                
+                                    
                 </div>
 
                 <div>
-                    <input type="checkbox" id="hogar" name="categorias" value="hogar">
                     <label for="hogar">Hogar</label>
+                    <input type="checkbox" id="hogar" name="categorias" value="hogar">
+                    
                 </div>
                 <div>
-                    <input type="checkbox" id="jugueteria" name="categorias" value="jugueteria">
                     <label for="jugueteria">Juguetería</label>
+                    <input type="checkbox" id="jugueteria" name="categorias" value="jugueteria">
+                    
                 </div>
                 <div>
+                    <label for="vidaSana">Vida Sana</label>
                     <input type="checkbox" id="vidaSana" name="categorias" value="vidaSana">
-                    <label for="vidaSana">Vida Sana</label><br>                
+                                  
                 </div>
 
             </div>
@@ -366,24 +436,27 @@ button {
     </div>
 
 
-    <footer>
-        <i class="fa fa-credit-card imagen-grande"  style="color: #1433d2;"></i>
-       
-        <h3>Pagá con tarjeta o en efectivo</h3>
-        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+    <footer >
+      <div class="main-footer">
+        <div>
+          <i class="fa fa-credit-card imagen-grande"  style="color: #1433d2;"></i>
         
-
-        <i class="fa fa-gift  imagen-grande" style="color: #1433d2;"></i>
-        <h3>Envío gratis desde $2.500</h3>
-        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
-        
-
-        <i class="fa fa-user-shield  imagen-grande" style="color: #1433d2;"></i>
-        <h3>Seguridad, de principio a fin</h3>
-        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
-    
-        <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
-    </footer>
+          <h3>Pagá con tarjeta o en efectivo</h3>
+          <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+        </div>  
+        <div>
+          <i class="fa fa-gift  imagen-grande" style="color: #1433d2;"></i>
+          <h3>Envío gratis desde $2.500</h3>
+          <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+        </div>
+        <div> 
+            <i class="fa fa-user-shield  imagen-grande" style="color: #1433d2;"></i>
+            <h3>Seguridad, de principio a fin</h3>
+            <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+        </div>
+      </div>
+      <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+  </footer>
 
 </body>
 </html>

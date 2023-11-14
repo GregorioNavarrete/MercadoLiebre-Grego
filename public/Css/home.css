@@ -67,6 +67,8 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 30px;
+
   }
 
   /*Es para agradar todas las imagenes del footer*/
@@ -198,6 +200,16 @@ footer {
   }
 
 
+.main-footer{
+  display: flex;
+  flex-wrap: wrap;
+
+
+  
+}
+footer i{
+  font-size: 30px;
+}
 
 
 
@@ -214,7 +226,7 @@ footer {
 
 
 /* Media query para dispositivos mobil */
-@media (max-width: 361px) {
+@media (max-width: 376px) {
 /*cuando el ancho de la pantalla sea igual o menor a 361 píxeles*/
   .burger-menu  {
 
@@ -238,7 +250,7 @@ footer {
 
 
   /* Navegación en tablets (ancho mínimo 361px) */
-@media screen and (min-width: 361px) {
+@media screen and (min-width: 376px) {
   /*Aplica estilos a los que son iguales o mayores a 361*/
   
   .burger-menu  {
@@ -309,6 +321,13 @@ footer {
   .heder-top-bar{
     width: 70%;
   }
+  /*para el despliegue del footer*/
+  .main-footer{
+    display: flex;
+    flex-wrap: nowrap;
+    
+  }
+
 }
 
 /* Navegación en desktop (ancho mínimo 769px) */
@@ -388,7 +407,7 @@ width: 70%;
 
 
 
-
+/*ponemos los hover */
 
 .CamionVerde:hover {
   transform: rotate(-90deg); /* 360 grados de rotación cuando se hace "hover" */

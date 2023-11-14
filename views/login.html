@@ -71,6 +71,9 @@
             padding: 10px;
             
         }
+          .botton:hover {
+            background-color: #0022AA;
+          }
 
 
         /*Estilos para el header*/
@@ -145,101 +148,7 @@ button {
     padding: 5px 0px;
     font-size: 14px;
   }
-  /*Media query del header*/
-  @media (max-width: 361px) {
-/*cuando el ancho de la pantalla sea igual o menor a 361 píxeles*/
-  .burger-menu  {
 
-    display: block; 
-   
-  }
-  .nav-bar {
-    display: none; 
-  }
-
-  .descripcion     {
-    display: none;
-  }
-  .producto{
-
-
-    width: 100%; /* Dos artículos en tablet (menos espacio entre ellos) */
-    
-  }
-} 
-
-@media screen and (min-width: 361px) {
-  /*Aplica estilos a los que son iguales o mayores a 361*/
-  
-  .burger-menu  {
-    display: none; /*lo contrario es "display: block"*/
-  }
-  .producto{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-
-
-
-
-
-
-  /*poner este codigo en terminos de Flex Box !!!!!!!*/
-
-  .UltimaVista{
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .producto {
-      width: 45%; /* Ancho de aproximadamente el 48% (ajusta según el margen) */
-  }
-    
-
-
-
- 
-
-
-
-
-
-  .main-heder-top-bar{
-
-    /*esta modificacion va tambien en PC*/
-    display: flex;
-    padding: 5%;
-    justify-content: space-between;
-    
-    
-  }
-
-  .main-heder-top-bar p {
-    padding-top: 40px;
-    max-width: 200px;
-  }
-  .main-heder-top-bar{
- 
-    padding:0px;
-
-  }
-  .nav-bar{
-    display: flex;
-    justify-content: space-between;
-  }
-  .nav-bar li{
-    margin: 5px;
-  }
-  .nav-right{
-    display: flex;
-    justify-content: space-around;
-  }
-  .nav-left{
-    display: flex;
-    justify-content: space-around;
-  }
-  .heder-top-bar{
-    width: 70%;
-  }
-}
 
         /*Estilo para el footer*/
         footer{
@@ -252,11 +161,127 @@ button {
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding-top: 30px;
+
         }
         footer h3{
             
             font-weight: bold;
         }
+        .main-footer{
+          display: flex;
+          flex-wrap: wrap;
+
+
+          
+        }
+        footer i{
+          font-size: 30px;
+        }
+
+
+
+
+
+
+      /*Todas las medias Querys*/
+
+
+      
+
+      @media (max-width: 376px) {
+    /*cuando el ancho de la pantalla sea igual o menor a 361 píxeles*/
+      .burger-menu  {
+        display: block; 
+      }
+      .nav-bar {
+        display: none; 
+      }
+      .descripcion     {
+        display: none;
+      }
+      .producto{
+        width: 100%; /* Dos artículos en tablet (menos espacio entre ellos) */
+      }
+    } 
+
+    @media screen and (min-width: 376px) {
+      /*Aplica estilos a los que son iguales o mayores a 361*/
+      
+      .burger-menu  {
+        display: none; /*lo contrario es "display: block"*/
+      }
+      .producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      }
+
+      .main-footer{
+          display: flex;
+          flex-wrap: nowrap;
+          
+        }
+
+
+
+
+      /*poner este codigo en terminos de Flex Box !!!!!!!*/
+
+      .UltimaVista{
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .producto {
+          width: 45%; /* Ancho de aproximadamente el 48% (ajusta según el margen) */
+      }
+        
+
+
+
+    
+
+
+
+
+
+      .main-heder-top-bar{
+
+        /*esta modificacion va tambien en PC*/
+        display: flex;
+        padding: 5%;
+        justify-content: space-between;
+        
+        
+      }
+
+      .main-heder-top-bar p {
+        padding-top: 40px;
+        max-width: 200px;
+      }
+      .main-heder-top-bar{
+    
+        padding:0px;
+
+      }
+      .nav-bar{
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-bar li{
+        margin: 5px;
+      }
+      .nav-right{
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav-left{
+        display: flex;
+        justify-content: space-around;
+      }
+      .heder-top-bar{
+        width: 70%;
+      }
+    }
+        
     </style>
 </head>
 <body>
@@ -315,22 +340,25 @@ button {
             
         </form>
     </div>
-    <footer>
-        <i class="fa fa-credit-card imagen-grande"  style="color: #1433d2;"></i>
-       
-        <h3>Pagá con tarjeta o en efectivo</h3>
-        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
-        
-
-        <i class="fa fa-gift  imagen-grande" style="color: #1433d2;"></i>
-        <h3>Envío gratis desde $2.500</h3>
-        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
-        
-
-        <i class="fa fa-user-shield  imagen-grande" style="color: #1433d2;"></i>
-        <h3>Seguridad, de principio a fin</h3>
-        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
-    
+    <footer >
+        <div class="main-footer">
+          <div>
+            <i class="fa fa-credit-card imagen-grande"  style="color: #1433d2;"></i>
+          
+            <h3>Pagá con tarjeta o en efectivo</h3>
+            <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+          </div>  
+          <div>
+            <i class="fa fa-gift  imagen-grande" style="color: #1433d2;"></i>
+            <h3>Envío gratis desde $2.500</h3>
+            <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+          </div>
+          <div> 
+              <i class="fa fa-user-shield  imagen-grande" style="color: #1433d2;"></i>
+              <h3>Seguridad, de principio a fin</h3>
+              <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+          </div>
+        </div>
         <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
     </footer>
     
